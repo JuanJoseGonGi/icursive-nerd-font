@@ -70,6 +70,12 @@
 
 > [`Fantasque Sans Mono`](https://github.com/belluzj/fantasque-sans)(by Jany Belluz, SIL Open Font License) + [`Dank Mono`](https://dank.sh)(by Grazil Ltd, paid)
 
+# Cascadia Code iCursive Cg (Non-free)
+
+![cascadia-code](https://user-images.githubusercontent.com/37491630/79304422-defe1d80-7f23-11ea-9e42-9bdbae9af30b.png)
+
+> [`Cascadia Code`](https://github.com/microsoft/cascadia-code)(by Microsoft, SIL Open Font License) + [`Cartograph`](https://connary.com/cartograph.html)(by Connary Fagen, Inc., paid)
+
 # InconsolataGo iCursive Pb (~~vscode~~ incompatible)
 
 ![InconsolataGo](https://user-images.githubusercontent.com/37491630/72135810-3e75eb80-337f-11ea-9c15-ed6967d9889b.png)
@@ -144,6 +150,28 @@ E.g.:
 
 The new font files will be placed in the `*Dk` folders.
 
+### Cg series
+
+#### Requirements
+
+1. Binary file of [Cartograph](https://connary.com/cartograph.html)
+2. GNU Bash
+3. Python (v2.7+)
+4. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
+
+#### Steps
+
+1. Clone this repository.
+2. `cd /path/to/icursive-nerd-font` and execute `./build.sh Cg /absolute/path/to/Cartograph\ CF\ Italic.ttf`
+
+E.g.:
+
+```sh
+./build.sh Dk /home/sainnhe/Downloads/Cartograph\ CF\ Italic.ttf
+```
+
+The new font files will be placed in the `*Cg` folders.
+
 # Contributing
 
 See [PATCH.md](./PATCH.md) for more information.
@@ -156,7 +184,7 @@ See [PATCH.md](./PATCH.md) for more information.
 
 **Q: What's your status line configuration?**
 
-**A:** Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb).
+**A:** See this [article](https://www.sainnhe.dev/post/status-line-config/).
 
 # Inspiration
 

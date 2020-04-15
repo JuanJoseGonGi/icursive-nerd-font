@@ -75,6 +75,30 @@ general_dk() {
     fi
 }
 # }}}
+# General iCursive Cg{{{
+general_cg() {
+    cp "$1" ./"Cartograph Italic.ttf"
+
+    # patch nerd font symbols
+    printf "\n${BGreen}==>${NC} ${BBlue}Patching nerd font symbols...${NC}\n"
+    if [ ! -d "nerd-fonts" ]; then
+        git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+    fi
+    cp ./"Cartograph Italic.ttf" ./nerd-fonts/
+    cd ./nerd-fonts || exit
+    ./font-patcher --mono -w -c -ext ttf "Cartograph Italic.ttf"
+    mv -f Cartograph*Compatible.ttf ../"Cartograph Italic.ttf"
+    rm ./"Cartograph Italic.ttf"
+    cd ../
+
+    # font rename reo
+    printf "\n${BGreen}==>${NC} ${BBlue}Cloning github.com/chrissimpkins/fontname.py ...${NC}\n"
+    if [ ! -d "fontname.py" ]; then
+        git clone --depth 1 https://github.com/chrissimpkins/fontname.py.git
+        chmod +x ./fontname.py/fontname.py
+    fi
+}
+# }}}
 # Fira Code iCursive Op{{{
 fira_op() {
     mkdir "Fira Code iCursive Op"
@@ -142,6 +166,12 @@ fantasque_dk() {
     ./.cache/fontname.py/fontname.py "Fantasque iCursive Dk" ./"Fantasque iCursive Dk/Fantasque iCursive Dk Italic".ttf > /dev/null
 }
 # }}}
+# Cascadia Code iCursive Cg{{{
+cascadia_cg() {
+    cp ./.cache/"Cartograph Italic".ttf ./"Cascadia Code iCursive Cg/Cascadia Code iCursive Cg Italic".ttf
+    ./.cache/fontname.py/fontname.py "Cascadia Code iCursive Cg" ./"Cascadia Code iCursive Cg/Cascadia Code iCursive Cg Italic".ttf > /dev/null
+}
+# }}}
 
 if [[ "$1"x == "Op"x ]]; then
     cd .cache || exit
@@ -160,6 +190,12 @@ elif [[ "$1"x == "Dk"x ]]; then
     cd ../
     printf "\n${BGreen}==>${NC} ${BBlue}Patching iCursive font...${NC}\n"
     fantasque_dk
+elif [[ "$1"x == "Cg"x ]]; then
+    cd .cache || exit
+    general_cg "$2"
+    cd ../
+    printf "\n${BGreen}==>${NC} ${BBlue}Patching iCursive font...${NC}\n"
+    cascadia_cg
 else
     printf "${BGreen}==>${NC} ${RED}Invalid parameters. Usage:${NC}\n"
     printf "${BGreen}==>${NC} ${Green}./build.sh [series] /path/to/non_free_font${NC}\n"
