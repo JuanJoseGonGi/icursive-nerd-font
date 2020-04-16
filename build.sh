@@ -20,9 +20,6 @@ general_op() {
 
     # patch ligatures
     printf "\n${BGreen}==>${NC} ${BBlue}Patching ligatures...${NC}\n"
-    if [ ! -d "operator-mono-lig" ]; then
-        git clone --depth 1 https://github.com/kiliman/operator-mono-lig.git
-    fi
     cd operator-mono-lig || exit
     mv ../"Operator Mono Book Italic.otf" ./original/OperatorMono-BookItalic.otf
     npm install
@@ -32,9 +29,6 @@ general_op() {
 
     # patch nerd font symbols
     printf "\n${BGreen}==>${NC} ${BBlue}Patching nerd font symbols...${NC}\n"
-    if [ ! -d "nerd-fonts" ]; then
-        git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-    fi
     cp ./"Operator Mono Book Italic.otf" ./nerd-fonts/
     cd ./nerd-fonts || exit
     ./font-patcher --mono -w -c -ext ttf "Operator Mono Book Italic.otf"
@@ -45,10 +39,7 @@ general_op() {
 
     # font rename reo
     printf "\n${BGreen}==>${NC} ${BBlue}Cloning github.com/chrissimpkins/fontname.py ...${NC}\n"
-    if [ ! -d "fontname.py" ]; then
-        git clone --depth 1 https://github.com/chrissimpkins/fontname.py.git
-        chmod +x ./fontname.py/fontname.py
-    fi
+    chmod +x ./fontname.py/fontname.py
 }
 # }}}
 # General iCursive Dk{{{
@@ -57,9 +48,6 @@ general_dk() {
 
     # patch nerd font symbols
     printf "\n${BGreen}==>${NC} ${BBlue}Patching nerd font symbols...${NC}\n"
-    if [ ! -d "nerd-fonts" ]; then
-        git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-    fi
     cp ./"Dank Mono Italic.ttf" ./nerd-fonts/
     cd ./nerd-fonts || exit
     ./font-patcher --mono -w -c -ext ttf "Dank Mono Italic.ttf"
@@ -69,10 +57,7 @@ general_dk() {
 
     # font rename reo
     printf "\n${BGreen}==>${NC} ${BBlue}Cloning github.com/chrissimpkins/fontname.py ...${NC}\n"
-    if [ ! -d "fontname.py" ]; then
-        git clone --depth 1 https://github.com/chrissimpkins/fontname.py.git
-        chmod +x ./fontname.py/fontname.py
-    fi
+    chmod +x ./fontname.py/fontname.py
 }
 # }}}
 # General iCursive Cg{{{
@@ -81,9 +66,6 @@ general_cg() {
 
     # patch nerd font symbols
     printf "\n${BGreen}==>${NC} ${BBlue}Patching nerd font symbols...${NC}\n"
-    if [ ! -d "nerd-fonts" ]; then
-        git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-    fi
     cp ./"Cartograph Italic.ttf" ./nerd-fonts/
     cd ./nerd-fonts || exit
     ./font-patcher --mono -w -c -ext ttf "Cartograph Italic.ttf"
@@ -93,10 +75,7 @@ general_cg() {
 
     # font rename reo
     printf "\n${BGreen}==>${NC} ${BBlue}Cloning github.com/chrissimpkins/fontname.py ...${NC}\n"
-    if [ ! -d "fontname.py" ]; then
-        git clone --depth 1 https://github.com/chrissimpkins/fontname.py.git
-        chmod +x ./fontname.py/fontname.py
-    fi
+    chmod +x ./fontname.py/fontname.py
 }
 # }}}
 # Fira Code iCursive Op{{{
@@ -105,9 +84,9 @@ fira_op() {
     cp ./"Fira Code iCursive S12/Fira Code iCursive S12 Regular".ttf ./"Fira Code iCursive Op/Fira Code iCursive Op Regular".ttf
     cp ./"Fira Code iCursive S12/Fira Code iCursive S12 Bold".ttf ./"Fira Code iCursive Op/Fira Code iCursive Op Bold".ttf
     cp ./.cache/"Operator Mono Book Italic".ttf ./"Fira Code iCursive Op/Fira Code iCursive Op Italic".ttf
-    ./.cache/fontname.py/fontname.py "Fira Code iCursive Op" ./"Fira Code iCursive Op/Fira Code iCursive Op Regular".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Fira Code iCursive Op" ./"Fira Code iCursive Op/Fira Code iCursive Op Bold".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Fira Code iCursive Op" ./"Fira Code iCursive Op/Fira Code iCursive Op Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Fira Code iCursive Op" ./"Fira Code iCursive Op/Fira Code iCursive Op Regular".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Fira Code iCursive Op" ./"Fira Code iCursive Op/Fira Code iCursive Op Bold".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Fira Code iCursive Op" ./"Fira Code iCursive Op/Fira Code iCursive Op Italic".ttf >/dev/null
 }
 # }}}
 # Source Code Pro iCursive Op{{{
@@ -116,9 +95,9 @@ source_op() {
     cp ./"Source Code Pro iCursive S12/Source Code Pro iCursive S12 Regular".ttf ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Regular".ttf
     cp ./"Source Code Pro iCursive S12/Source Code Pro iCursive S12 Bold".ttf ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Bold".ttf
     cp ./.cache/"Operator Mono Book Italic".ttf ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Italic".ttf
-    ./.cache/fontname.py/fontname.py "Source Code Pro iCursive Op" ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Regular".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Source Code Pro iCursive Op" ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Bold".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Source Code Pro iCursive Op" ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Source Code Pro iCursive Op" ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Regular".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Source Code Pro iCursive Op" ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Bold".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Source Code Pro iCursive Op" ./"Source Code Pro iCursive Op/Source Code Pro iCursive Op Italic".ttf >/dev/null
 }
 # }}}
 # InconsolataLGC iCursive Op{{{
@@ -127,9 +106,9 @@ inconsolata_lgc_op() {
     cp ./"InconsolataLGC iCursive S12/InconsolataLGC iCursive S12 Regular".ttf ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Regular".ttf
     cp ./"InconsolataLGC iCursive S12/InconsolataLGC iCursive S12 Bold".ttf ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Bold".ttf
     cp ./.cache/"Operator Mono Book Italic".ttf ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Italic".ttf
-    ./.cache/fontname.py/fontname.py "InconsolataLGC iCursive Op" ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Regular".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "InconsolataLGC iCursive Op" ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Bold".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "InconsolataLGC iCursive Op" ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "InconsolataLGC iCursive Op" ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Regular".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "InconsolataLGC iCursive Op" ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Bold".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "InconsolataLGC iCursive Op" ./"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Italic".ttf >/dev/null
 }
 # }}}
 # Meslo iCursive Op{{{
@@ -138,9 +117,9 @@ meslo_op() {
     cp ./"Meslo iCursive S12/Meslo iCursive S12 Regular".ttf ./"Meslo iCursive Op/Meslo iCursive Op Regular".ttf
     cp ./"Meslo iCursive S12/Meslo iCursive S12 Bold".ttf ./"Meslo iCursive Op/Meslo iCursive Op Bold".ttf
     cp ./.cache/"Operator Mono Book Italic".ttf ./"Meslo iCursive Op/Meslo iCursive Op Italic".ttf
-    ./.cache/fontname.py/fontname.py "Meslo iCursive Op" ./"Meslo iCursive Op/Meslo iCursive Op Regular".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Meslo iCursive Op" ./"Meslo iCursive Op/Meslo iCursive Op Bold".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Meslo iCursive Op" ./"Meslo iCursive Op/Meslo iCursive Op Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Meslo iCursive Op" ./"Meslo iCursive Op/Meslo iCursive Op Regular".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Meslo iCursive Op" ./"Meslo iCursive Op/Meslo iCursive Op Bold".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Meslo iCursive Op" ./"Meslo iCursive Op/Meslo iCursive Op Italic".ttf >/dev/null
 }
 # }}}
 # Hack iCursive Op{{{
@@ -149,27 +128,27 @@ hack_op() {
     cp ./"Hack iCursive S12/Hack iCursive S12 Regular".ttf ./"Hack iCursive Op/Hack iCursive Op Regular".ttf
     cp ./"Hack iCursive S12/Hack iCursive S12 Bold".ttf ./"Hack iCursive Op/Hack iCursive Op Bold".ttf
     cp ./.cache/"Operator Mono Book Italic".ttf ./"Hack iCursive Op/Hack iCursive Op Italic".ttf
-    ./.cache/fontname.py/fontname.py "Hack iCursive Op" ./"Hack iCursive Op/Hack iCursive Op Regular".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Hack iCursive Op" ./"Hack iCursive Op/Hack iCursive Op Bold".ttf > /dev/null
-    ./.cache/fontname.py/fontname.py "Hack iCursive Op" ./"Hack iCursive Op/Hack iCursive Op Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Hack iCursive Op" ./"Hack iCursive Op/Hack iCursive Op Regular".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Hack iCursive Op" ./"Hack iCursive Op/Hack iCursive Op Bold".ttf >/dev/null
+    ./.cache/fontname.py/fontname.py "Hack iCursive Op" ./"Hack iCursive Op/Hack iCursive Op Italic".ttf >/dev/null
 }
 # }}}
 # Fantasque iCursive Op{{{
 fantasque_op() {
     cp ./.cache/"Operator Mono Book Italic".ttf ./"Fantasque iCursive Op/Fantasque iCursive Op Italic".ttf
-    ./.cache/fontname.py/fontname.py "Fantasque iCursive Op" ./"Fantasque iCursive Op/Fantasque iCursive Op Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Fantasque iCursive Op" ./"Fantasque iCursive Op/Fantasque iCursive Op Italic".ttf >/dev/null
 }
 # }}}
 # Fantasque iCursive Dk{{{
 fantasque_dk() {
     cp ./.cache/"Dank Mono Italic".ttf ./"Fantasque iCursive Dk/Fantasque iCursive Dk Italic".ttf
-    ./.cache/fontname.py/fontname.py "Fantasque iCursive Dk" ./"Fantasque iCursive Dk/Fantasque iCursive Dk Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Fantasque iCursive Dk" ./"Fantasque iCursive Dk/Fantasque iCursive Dk Italic".ttf >/dev/null
 }
 # }}}
 # Cascadia Code iCursive Cg{{{
 cascadia_cg() {
     cp ./.cache/"Cartograph Italic".ttf ./"Cascadia Code iCursive Cg/Cascadia Code iCursive Cg Italic".ttf
-    ./.cache/fontname.py/fontname.py "Cascadia Code iCursive Cg" ./"Cascadia Code iCursive Cg/Cascadia Code iCursive Cg Italic".ttf > /dev/null
+    ./.cache/fontname.py/fontname.py "Cascadia Code iCursive Cg" ./"Cascadia Code iCursive Cg/Cascadia Code iCursive Cg Italic".ttf >/dev/null
 }
 # }}}
 

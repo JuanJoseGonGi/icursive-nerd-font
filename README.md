@@ -18,6 +18,15 @@ For a preview of all available fonts, see [**this post**](https://www.sainnhe.de
 
 ### Build
 
+#### General Setup
+
+There are some submodules in this repository, you'll need to update them at the very beginning.
+
+```shell
+$ git submodule init
+$ git submodule update
+```
+
 #### Op series
 
 ##### Requirements
