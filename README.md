@@ -8,7 +8,7 @@ Some fonts are free of charge, they are patched already and you can directly use
 
 ### Preview
 
-For a preview of all available fonts, see [**this post**](https://www.sainnhe.dev/post/icursive-nerd-font-preview/).
+For a preview of all available fonts, see [this post](https://www.sainnhe.dev/post/icursive-nerd-font-preview/).
 
 ## Installation
 
@@ -23,6 +23,8 @@ For a preview of all available fonts, see [**this post**](https://www.sainnhe.de
 There are some submodules in this repository, you'll need to update them at the very beginning.
 
 ```shell
+$ git clone --depth 1 https://github.com/sainnhe/icursive-nerd-font.git
+$ cd ./icursive-nerd-font
 $ git submodule init
 $ git submodule update
 ```
@@ -38,10 +40,9 @@ $ git submodule update
 5. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
 6. [`fonttools`](https://github.com/fonttools/fonttools) package. See [Operator Mono Ligatures](https://github.com/kiliman/operator-mono-lig#prerequisites) for details.
 
-##### Steps
+##### Step
 
-1. Clone this repository.
-2. `cd /path/to/icursive-nerd-font` and execute `./build.sh Op /absolute/path/to/OperatorMono-BookItalic.otf`
+`cd /path/to/icursive-nerd-font` and execute `./build.sh Op /absolute/path/to/OperatorMono-BookItalic.otf`
 
 E.g.:
 
@@ -60,10 +61,9 @@ The new font files will be placed in the `*Op` folders.
 3. Python (v2.7+)
 4. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
 
-##### Steps
+##### Step
 
-1. Clone this repository.
-2. `cd /path/to/icursive-nerd-font` and execute `./build.sh Dk /absolute/path/to/Dank\ Mono\ Italic.ttf`
+`cd /path/to/icursive-nerd-font` and execute `./build.sh Dk /absolute/path/to/Dank\ Mono\ Italic.ttf`
 
 E.g.:
 
@@ -82,10 +82,9 @@ The new font files will be placed in the `*Dk` folders.
 3. Python (v2.7+)
 4. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
 
-##### Steps
+##### Step
 
-1. Clone this repository.
-2. `cd /path/to/icursive-nerd-font` and execute `./build.sh Cg /absolute/path/to/Cartograph\ CF\ Italic.ttf`
+`cd /path/to/icursive-nerd-font` and execute `./build.sh Cg /absolute/path/to/Cartograph\ CF\ Italic.ttf`
 
 E.g.:
 
