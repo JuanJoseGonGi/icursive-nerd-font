@@ -184,6 +184,8 @@ printf "\n${BGreen}==>${NC} ${BBlue}Cache directory:${NC} ${Green}%s/.cache/${NC
 printf "${BGreen}==>${NC} ${BBlue}Clean cache? [Y/n]${NC} "
 read -r clean
 if [ "$clean"x == ""x ] || [ "$clean"x == "Y"x ] || [ "$clean"x == "y"x ]; then
-    rm -rf .cache
+    git clean -fdx -- .cache
+    cd .cache/fontname.py
+    git co -- .
 fi
 printf "\n${BGreen}==>${NC} ${BGreen}Done.${NC}\n"
