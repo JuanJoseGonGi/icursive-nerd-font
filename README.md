@@ -1,3 +1,7 @@
+## Preview
+
+For a preview of all available fonts, see [this post](https://www.sainnhe.dev/post/icursive-nerd-font-preview/).
+
 ## Introduction
 
 Many vscode users use fonts like this with some themes that support italics, I want to do the same in vim. I've tried [FiraCodeiScript](https://github.com/kencrocken/FiraCodeiScript), [Operator Mono](https://www.typography.com/fonts/operator/styles) and [Dank Mono](https://dank.sh/) but their support for nerd font symbols is not very good.
@@ -5,10 +9,6 @@ Many vscode users use fonts like this with some themes that support italics, I w
 Therefore, I decided to patch some fonts myself. All these fonts should support nerd font symbols and be suitable for use in TUI editors like vim.
 
 Some fonts are free of charge, they are patched already and you can directly use the binary files. However, some fonts are not free, so you need to build them by yourself if you want to use them.
-
-### Preview
-
-For a preview of all available fonts, see [this post](https://www.sainnhe.dev/post/icursive-nerd-font-preview/).
 
 ## Installation
 
