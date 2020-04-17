@@ -89,7 +89,7 @@ The new font files will be placed in the `*Dk` folders.
 E.g.:
 
 ```sh
-./build.sh Dk /home/sainnhe/Downloads/Cartograph\ CF\ Italic.ttf
+./build.sh Cg /home/sainnhe/Downloads/Cartograph\ CF\ Italic.ttf
 ```
 
 The new font files will be placed in the `*Cg` folders.
