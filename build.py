@@ -1,8 +1,12 @@
 #!/usr/bin/env python
+"""
+iCursive Nerd Font Patcher
+"""
 
 import os
 from subprocess import call
 from shutil import copyfile, move
+from glob import glob
 from platform import system
 
 # {{{Initialization
@@ -24,9 +28,9 @@ def general(style, font_path):
     general setup for all styles
     """
     os.chdir(".cache")
-    if style == "Op":
-        # patch ligatures
+    if style == "Op":  # {{{
         copyfile(font_path, "./Operator Mono Book Italic.otf")
+        # patch ligatures
         print("\n" + BYELLOW + "==>" + NC + " " + BGREEN +
               "Patching ligatures..." + NC + "\n")
         os.chdir("operator-mono-lig")
@@ -43,6 +47,52 @@ def general(style, font_path):
         # patch nerd font symbols
         print("\n" + BYELLOW + "==>" + NC + " " + BGREEN +
               "Patching nerd font symbols..." + NC + "\n")
+        copyfile("Operator Mono Book Italic.otf",
+                 "nerd-fonts/Operator Mono Book Italic.otf")
+        os.chdir("nerd-fonts")
+        call([
+            "python", "font-patcher", "--mono", "-w", "-c", "-ext", "ttf",
+            r"Operator Mono Book Italic.otf"
+        ])
+        for file in glob("Operator*Windows Compatible.ttf"):
+            move(file, "../Operator Mono Book Italic.ttf")
+        os.remove("Operator Mono Book Italic.otf")
+        os.remove("../Operator Mono Book Italic.otf")
+        os.chdir(os.popen("git rev-parse --show-toplevel").read().rstrip("\n"))
+        # }}}
+    elif style == "Dk":  # {{{
+        copyfile(font_path, "Dank Mono Italic.ttf")
+        # patch nerd font symbols
+        print("\n" + BYELLOW + "==>" + NC + " " + BGREEN +
+              "Patching nerd font symbols..." + NC + "\n")
+        move("Dank Mono Italic.ttf", "nerd-fonts/Dank Mono Italic.ttf")
+        os.chdir("nerd-fonts")
+        call([
+            "python", "font-patcher", "--mono", "-w", "-c", "-ext", "ttf",
+            r"Dank Mono Italic.ttf"
+        ])
+        for file in glob("Dank*Windows Compatible.ttf"):
+            move(file, "../Dank Mono Italic.ttf")
+        os.remove("Dank Mono Italic.ttf")
+        os.chdir(os.popen("git rev-parse --show-toplevel").read().rstrip("\n"))
+        # }}}
+    elif style == "Cg":  # {{{
+        copyfile(font_path, "Cartograph Italic.ttf")
+        # patch nerd font symbols
+        print("\n" + BYELLOW + "==>" + NC + " " + BGREEN +
+              "Patching nerd font symbols..." + NC + "\n")
+        move("Cartograph Italic.ttf", "nerd-fonts/Cartograph Italic.ttf")
+        os.chdir("nerd-fonts")
+        call([
+            "python", "font-patcher", "--mono", "-w", "-c", "-ext", "ttf",
+            r"Cartograph Italic.ttf"
+        ])
+        for file in glob("*artograp*Windows Compatible.ttf"):
+            move(file, "../Cartograph Italic.ttf")
+        os.remove("Cartograph Italic.ttf")
+        os.chdir(os.popen("git rev-parse --show-toplevel").read().rstrip("\n"))
+        # }}}
 
 
-general("Op", "/home/sainnhe/.local/share/fonts/Operator Mono Book Italic.otf")
+general("Cg",
+        "/home/sainnhe/.local/share/fonts/Cartograph Mono Regular Italic.ttf")
