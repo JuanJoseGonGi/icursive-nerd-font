@@ -292,11 +292,11 @@ def build(style):
 
 
 if len(sys.argv) != 3:
-    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments.1" +
+    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments." +
           NC + "\n")
     sys.exit(1)
 elif sys.argv[1] != "Op" and sys.argv[1] != "Dk" and sys.argv[1] != "Cg":
-    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments.2" +
+    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments." +
           NC + "\n")
     sys.exit(1)
 elif not os.path.isfile(sys.argv[2]):
