@@ -34,20 +34,19 @@ $ git submodule update
 ##### Requirements
 
 1. Binary file of [Operator Mono](https://www.typography.com/fonts/operator/styles)
-2. GNU Bash
-3. Node.js
-4. Python (v2.7+)
-5. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
-6. [`fonttools`](https://github.com/fonttools/fonttools) package. See [Operator Mono Ligatures](https://github.com/kiliman/operator-mono-lig#prerequisites) for details.
+2. Node.js
+3. Python (v2.7+)
+4. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
+5. [`fonttools`](https://github.com/fonttools/fonttools) package. See [Operator Mono Ligatures](https://github.com/kiliman/operator-mono-lig#prerequisites) for details.
 
 ##### Step
 
-`cd /path/to/icursive-nerd-font` and execute `./build.sh Op /absolute/path/to/OperatorMono-BookItalic.otf`
+`cd /path/to/icursive-nerd-font` and execute `./build.py Op /path/to/OperatorMono-BookItalic.otf`
 
 E.g.:
 
 ```sh
-./build.sh Op /home/sainnhe/Downloads/Operator\ Mono/Operator\ Mono\ Book\ Italic.otf
+./build.py Op ~/Downloads/Operator\ Mono/Operator\ Mono\ Book\ Italic.otf
 ```
 
 The new font files will be placed in the `*Op` folders.
@@ -57,18 +56,17 @@ The new font files will be placed in the `*Op` folders.
 ##### Requirements
 
 1. Binary file of [Dank Mono](https://dank.sh)
-2. GNU Bash
-3. Python (v2.7+)
-4. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
+2. Python (v2.7+)
+3. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
 
 ##### Step
 
-`cd /path/to/icursive-nerd-font` and execute `./build.sh Dk /absolute/path/to/Dank\ Mono\ Italic.ttf`
+`cd /path/to/icursive-nerd-font` and execute `./build.py Dk /path/to/Dank\ Mono\ Italic.ttf`
 
 E.g.:
 
 ```sh
-./build.sh Dk /home/sainnhe/Downloads/Dank\ Mono\ Italic.ttf
+./build.py Dk ~/Downloads/Dank\ Mono\ Italic.ttf
 ```
 
 The new font files will be placed in the `*Dk` folders.
@@ -78,18 +76,17 @@ The new font files will be placed in the `*Dk` folders.
 ##### Requirements
 
 1. Binary file of [Cartograph](https://connary.com/cartograph.html)
-2. GNU Bash
-3. Python (v2.7+)
-4. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
+2. Python (v2.7+)
+3. Python 2 (or Python 3), `python-fontforge` package. See [Nerd Font Patcher](https://github.com/ryanoasis/nerd-fonts/#font-patcher) for details.
 
 ##### Step
 
-`cd /path/to/icursive-nerd-font` and execute `./build.sh Cg /absolute/path/to/Cartograph\ CF\ Italic.ttf`
+`cd /path/to/icursive-nerd-font` and execute `./build.py Cg /path/to/Cartograph\ CF\ Italic.ttf`
 
 E.g.:
 
 ```sh
-./build.sh Cg /home/sainnhe/Downloads/Cartograph\ CF\ Italic.ttf
+./build.py Cg ~/Downloads/Cartograph\ Italic.ttf
 ```
 
 The new font files will be placed in the `*Cg` folders.
