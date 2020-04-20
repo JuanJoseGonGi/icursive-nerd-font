@@ -24,7 +24,7 @@ os.chdir(os.popen("git rev-parse --show-toplevel").read().rstrip("\n"))
 
 
 # }}}
-def general(style, font_path):
+def general(style, font_path):  # {{{
     """
     general setup for all styles
     """
@@ -95,7 +95,8 @@ def general(style, font_path):
         # }}}
 
 
-def build(style):
+# }}}
+def build(style):  # {{{
     """
     build fonts
     """
@@ -291,6 +292,7 @@ def build(style):
         # }}}
 
 
+# }}}
 if len(sys.argv) != 3:
     print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments." +
           NC + "\n")
