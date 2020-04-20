@@ -4,10 +4,11 @@ iCursive Nerd Font Patcher
 """
 
 import os
-from subprocess import call
-from shutil import copyfile, move
+import sys
 from glob import glob
 from platform import system
+from shutil import copyfile, move
+from subprocess import STDOUT, call
 
 # {{{Initialization
 RED = "\033[0;31m"
@@ -94,5 +95,223 @@ def general(style, font_path):
         # }}}
 
 
-general("Cg",
-        "/home/sainnhe/.local/share/fonts/Cartograph Mono Regular Italic.ttf")
+def build(style):
+    """
+    build fonts
+    """
+    dev_null = open(os.devnull, 'w')
+    if style == "Op":  # {{{
+        # Fira Code iCursive Op
+        os.mkdir(os.path.join(os.getcwd(), "Fira Code iCursive Op"))
+        copyfile("Fira Code iCursive S12/Fira Code iCursive S12 Regular.ttf",
+                 "Fira Code iCursive Op/Fira Code iCursive Op Regular.ttf")
+        copyfile("Fira Code iCursive S12/Fira Code iCursive S12 Bold.ttf",
+                 "Fira Code iCursive Op/Fira Code iCursive Op Bold.ttf")
+        copyfile(".cache/Operator Mono Book Italic.ttf",
+                 "Fira Code iCursive Op/Fira Code iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Fira Code iCursive Op",
+            r"Fira Code iCursive Op/Fira Code iCursive Op Regular.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Fira Code iCursive Op",
+            r"Fira Code iCursive Op/Fira Code iCursive Op Bold.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Fira Code iCursive Op",
+            r"Fira Code iCursive Op/Fira Code iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # Source Code Pro iCursive Op
+        os.mkdir(os.path.join(os.getcwd(), "Source Code Pro iCursive Op"))
+        copyfile(
+            "Source Code Pro iCursive S12/" +
+            "Source Code Pro iCursive S12 Regular.ttf",
+            "Source Code Pro iCursive Op/" +
+            "Source Code Pro iCursive Op Regular.ttf")
+        copyfile(
+            "Source Code Pro iCursive S12/" +
+            "Source Code Pro iCursive S12 Bold.ttf",
+            "Source Code Pro iCursive Op/" +
+            "Source Code Pro iCursive Op Bold.ttf")
+        copyfile(
+            ".cache/Operator Mono Book Italic.ttf",
+            "Source Code Pro iCursive Op/" +
+            "Source Code Pro iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Source Code Pro iCursive Op", r"Source Code Pro iCursive Op/" +
+            r"Source Code Pro iCursive Op Regular.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Source Code Pro iCursive Op", r"Source Code Pro iCursive Op/" +
+            r"Source Code Pro iCursive Op Bold.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Source Code Pro iCursive Op", r"Source Code Pro iCursive Op/" +
+            r"Source Code Pro iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # InconsolataLGC iCursive Op
+        os.mkdir(os.path.join(os.getcwd(), "InconsolataLGC iCursive Op"))
+        copyfile(
+            "InconsolataLGC iCursive S12/" +
+            "InconsolataLGC iCursive S12 Regular.ttf",
+            "InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Regular.ttf"
+        )
+        copyfile(
+            "InconsolataLGC iCursive S12/InconsolataLGC iCursive S12 Bold.ttf",
+            "InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Bold.ttf")
+        copyfile(
+            ".cache/Operator Mono Book Italic.ttf",
+            "InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"InconsolataLGC iCursive Op", r"InconsolataLGC iCursive Op/" +
+            r"InconsolataLGC iCursive Op Regular.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"InconsolataLGC iCursive Op",
+            r"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Bold.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"InconsolataLGC iCursive Op",
+            r"InconsolataLGC iCursive Op/InconsolataLGC iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # Meslo iCursive Op
+        os.mkdir(os.path.join(os.getcwd(), "Meslo iCursive Op"))
+        copyfile("Meslo iCursive S12/Meslo iCursive S12 Regular.ttf",
+                 "Meslo iCursive Op/Meslo iCursive Op Regular.ttf")
+        copyfile("Meslo iCursive S12/Meslo iCursive S12 Bold.ttf",
+                 "Meslo iCursive Op/Meslo iCursive Op Bold.ttf")
+        copyfile(".cache/Operator Mono Book Italic.ttf",
+                 "Meslo iCursive Op/Meslo iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py", r"Meslo iCursive Op",
+            r"Meslo iCursive Op/Meslo iCursive Op Regular.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py", r"Meslo iCursive Op",
+            r"Meslo iCursive Op/Meslo iCursive Op Bold.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py", r"Meslo iCursive Op",
+            r"Meslo iCursive Op/Meslo iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # Hack iCursive Op
+        os.mkdir(os.path.join(os.getcwd(), "Hack iCursive Op"))
+        copyfile("Hack iCursive S12/Hack iCursive S12 Regular.ttf",
+                 "Hack iCursive Op/Hack iCursive Op Regular.ttf")
+        copyfile("Hack iCursive S12/Hack iCursive S12 Bold.ttf",
+                 "Hack iCursive Op/Hack iCursive Op Bold.ttf")
+        copyfile(".cache/Operator Mono Book Italic.ttf",
+                 "Hack iCursive Op/Hack iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py", r"Hack iCursive Op",
+            r"Hack iCursive Op/Hack iCursive Op Regular.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py", r"Hack iCursive Op",
+            r"Hack iCursive Op/Hack iCursive Op Bold.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py", r"Hack iCursive Op",
+            r"Hack iCursive Op/Hack iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # Fantasque iCursive Op
+        copyfile(".cache/Operator Mono Book Italic.ttf",
+                 "Fantasque iCursive Op/Fantasque iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Fantasque iCursive Op",
+            r"Fantasque iCursive Op/Fantasque iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # }}}
+    elif style == "Dk":  # {{{
+        # Fantasque iCursive Dk
+        copyfile(".cache/Dank Mono Italic.ttf",
+                 "Fantasque iCursive Dk/Fantasque iCursive Dk Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Fantasque iCursive Dk",
+            r"Fantasque iCursive Dk/Fantasque iCursive Dk Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # }}}
+    elif style == "Cg":  # {{{
+        # Cascadia Code iCursive Cg
+        copyfile(
+            ".cache/Cartograph Italic.ttf", "Cascadia Code iCursive Cg/" +
+            "Cascadia Code iCursive Cg Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Cascadia Code iCursive Cg",
+            r"Cascadia Code iCursive Cg/Cascadia Code iCursive Cg Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        # }}}
+
+
+if len(sys.argv) != 3:
+    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments.1" +
+          NC + "\n")
+    sys.exit(1)
+elif sys.argv[1] != "Op" and sys.argv[1] != "Dk" and sys.argv[1] != "Cg":
+    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "Invalid arguments.2" +
+          NC + "\n")
+    sys.exit(1)
+elif not os.path.isfile(sys.argv[2]):
+    print("\n" + BYELLOW + "==>" + NC + " " + BRED + "File not accessible." +
+          NC + "\n")
+    sys.exit(1)
+else:
+    general(sys.argv[1], sys.argv[2])
+    build(sys.argv[1])
+print("\n" + BYELLOW + "==>" + NC + " " + BBLUE + "Cache directory:" + NC +
+      GREEN + os.path.join(os.getcwd(), ".cache") + "\n")
+CLEAN = input(BYELLOW + "==>" + NC + " " + BBLUE + "Clean cache? [Y/n] ")
+if CLEAN in ("", "Y", "y"):
+    print(BYELLOW + "==>" + NC + " " + BGREEN +
+          "git clean -fdx -- .cache" + NC + "\n")
+    call(["git", "clean", "-d", "-f", "-x", "--", ".cache"])
+print("\n" + BYELLOW + "==>" + NC + " " + BGREEN +
+      "Done." + NC + "\n")
