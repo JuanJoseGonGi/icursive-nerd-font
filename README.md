@@ -1,6 +1,6 @@
 ## Preview
 
-For a preview of all available fonts, see [this post](https://www.sainnhe.dev/post/icursive-nerd-font-preview/).
+For a preview of all available fonts, see [this wiki page](https://github.com/sainnhe/icursive-nerd-font/wiki/Preview).
 
 ## Introduction
 
