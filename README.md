@@ -14,7 +14,11 @@ Some fonts are free of charge, they are patched already and you can directly use
 
 1. Clone this repository.
 2. If you want to install non-free fonts, you need to buy the fonts and build them by yourself.
-2. For linux users, follow this [guide](https://wiki.archlinux.org/index.php/Fonts#Manual_installation) to install them.
+3. For linux users, follow this [guide](https://wiki.archlinux.org/index.php/Fonts#Manual_installation) to install them.
+
+In order to avoid copyright infringement, I cannot directly distribute the binary files of some fonts. However, if you encounter problems during the build process, [email me](mailto:sainnhe@gmail.com) and I will send you the font files that have been built.
+
+For Arch Linux users, you can directly install all these fonts from [my repository](https://repo.sainnhe.dev/archlinux/).
 
 ### Build
 
