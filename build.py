@@ -286,6 +286,16 @@ def build(style):  # {{{
         ],
              stdout=dev_null,
              stderr=STDOUT)
+        # Cascadia Code iCursive Dk
+        copyfile(".cache/Dank Mono Italic.ttf",
+                 "Cascadia Code iCursive Dk/Cascadia Code iCursive Dk Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Cascadia Code iCursive Dk",
+            r"Cascadia Code iCursive Dk/Cascadia Code iCursive Dk Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
         # }}}
     elif style == "Cg":  # {{{
         # Cascadia Code iCursive Cg
