@@ -309,6 +309,17 @@ def build(style):  # {{{
         ],
              stdout=dev_null,
              stderr=STDOUT)
+        # Recursive Code iCursive Cg
+        copyfile(
+            ".cache/Cartograph Italic.ttf", "Recursive Code iCursive Cg/" +
+            "Recursive Code iCursive Cg Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Recursive Code iCursive Cg",
+            r"Recursive Code iCursive Cg/Recursive Code iCursive Cg Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
         # }}}
 
 
