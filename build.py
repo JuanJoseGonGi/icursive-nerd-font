@@ -264,6 +264,44 @@ def build(style):  # {{{
         ],
              stdout=dev_null,
              stderr=STDOUT)
+        # Lilex iCursive Op
+        os.mkdir(os.path.join(os.getcwd(), "Lilex iCursive Op"))
+        copyfile("Lilex iCursive S12/Lilex iCursive S12 Regular.ttf",
+                 "Lilex iCursive Op/Lilex iCursive Op Regular.ttf")
+        copyfile("Lilex iCursive S12/Lilex iCursive S12 Medium.ttf",
+                 "Lilex iCursive Op/Lilex iCursive Op Medium.ttf")
+        copyfile("Lilex iCursive S12/Lilex iCursive S12 Bold.ttf",
+                 "Lilex iCursive Op/Lilex iCursive Op Bold.ttf")
+        copyfile(".cache/Operator Mono Book Italic.ttf",
+                 "Lilex iCursive Op/Lilex iCursive Op Italic.ttf")
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Lilex iCursive Op",
+            r"Lilex iCursive Op/Lilex iCursive Op Regular.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Lilex iCursive Op",
+            r"Lilex iCursive Op/Lilex iCursive Op Medium.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Lilex iCursive Op",
+            r"Lilex iCursive Op/Lilex iCursive Op Bold.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
+        call([
+            "python", ".cache/fontname.py/fontname.py",
+            r"Lilex iCursive Op",
+            r"Lilex iCursive Op/Lilex iCursive Op Italic.ttf"
+        ],
+             stdout=dev_null,
+             stderr=STDOUT)
         # }}}
     elif style == "Dk":  # {{{
         # Fantasque iCursive Dk
