@@ -18,7 +18,7 @@ Some fonts are free of charge, they are patched already and you can directly use
 
 In order to avoid copyright infringement, I cannot directly distribute the binary files of some fonts. However, if you encounter problems during the build process, [email me](mailto:sainnhe@gmail.com) and I will send you the font files that have been built.
 
-For Arch Linux users, you can directly install all these fonts from [my repository](https://repo.sainnhe.dev/archlinux/).
+For Arch Linux users, you can directly install all these fonts from [my repository](https://repo.sainnhe.dev/archlinux/). All these fonts are in a package group named `icursive-nerd-fonts`, so simply add this repository and install them via `pacman -S icursive-nerd-fonts`.
 
 ### Build
 
