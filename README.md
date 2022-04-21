@@ -1,3 +1,7 @@
+**Archived. See this post instead: https://www.sainnhe.dev/post/patch-fonts-with-cursive-italic-styles/**
+
+---
+
 ## Preview
 
 For a preview of all available fonts, see [this wiki page](https://github.com/sainnhe/icursive-nerd-font/wiki/Preview).
