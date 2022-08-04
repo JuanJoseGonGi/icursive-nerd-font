@@ -1,6 +1,0 @@
-[submodule ".cache/operator-mono-lig"]
-	path = .cache/operator-mono-lig
-	url = https://github.com/kiliman/operator-mono-lig.git
-[submodule ".cache/fontname.py"]
-	path = .cache/fontname.py
-	url = https://github.com/chrissimpkins/fontname.py.git
