@@ -8,6 +8,12 @@
 
 ---
 
+[Nanum Gothic Coding](https://fonts.google.com/specimen/Nanum+Gothic+Coding#standard-styles) + [Dank Mono](https://philpl.gumroad.com/l/dank-mono) = [Danum Gothic](./dist/Danum%20Gothic)
+
+![Danum Gothic](https://gitlab.com/sainnhe/img/-/raw/master/font-Danum-Gothic.png)
+
+---
+
 [Fira Code](https://github.com/tonsky/FiraCode) + [Operator Mono](https://www.typography.com/fonts/operator/styles) = [Fisa Code](./dist/Fisa%20Code)
 
 ![Fisa Code](https://gitlab.com/sainnhe/img/-/raw/master/font-Fisa%20Code.png)
@@ -20,21 +26,15 @@
 
 ---
 
-[Lucida Console](https://docs.microsoft.com/en-us/typography/font-list/lucida-console) + [MonoLisa](https://www.monolisa.dev) = [Lucida iScript](./dist/Lucida%20iScript)
+[Lucida Console](https://docs.microsoft.com/en-us/typography/font-list/lucida-console) + [MonoLisa](https://www.monolisa.dev) = [Lemonade](./dist/Lemonade)
 
-![Lucida iScript](https://gitlab.com/sainnhe/img/-/raw/master/font-Lucida-iScript.png)
+![Lemonade](https://gitlab.com/sainnhe/img/-/raw/master/font-Lemonade.png)
 
 ---
 
 [Monaco](<https://en.wikipedia.org/wiki/Monaco_(typeface)>) + [MonoLisa](https://www.monolisa.dev) = [Macon](./dist/Macon)
 
 ![Macon](https://gitlab.com/sainnhe/img/-/raw/master/font-Macon.png)
-
----
-
-[Nanum Gothic Coding](https://fonts.google.com/specimen/Nanum+Gothic+Coding#standard-styles) + [Dank Mono](https://philpl.gumroad.com/l/dank-mono) = [Nanum Gothic Cursive](./dist/Nanum%20Gothic%20Cursive)
-
-![Nanum Gothic Cursive](https://gitlab.com/sainnhe/img/-/raw/master/font-Nanum-Gothic-Cursive.png)
 
 ---
 
