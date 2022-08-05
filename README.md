@@ -2,12 +2,6 @@
 
 ---
 
-[Agave](https://github.com/blobject/agave) + [Dank Mono](https://philpl.gumroad.com/l/dank-mono) = [Adove](./dist/Adove)
-
-![Adove](https://gitlab.com/sainnhe/img/-/raw/master/font-Adove.png)
-
----
-
 [Cascadia Code](https://github.com/microsoft/cascadia-code) + [Cartograph CF](https://connary.com/cartograph.html) = [Cascursive](./dist/Cascursive)
 
 ![Cascursive](https://gitlab.com/sainnhe/img/-/raw/master/font-Cascursive.png)
@@ -17,12 +11,6 @@
 [Fira Code](https://github.com/tonsky/FiraCode) + [Operator Mono](https://www.typography.com/fonts/operator/styles) = [Fisa Code](./dist/Fisa%20Code)
 
 ![Fisa Code](https://gitlab.com/sainnhe/img/-/raw/master/font-Fisa%20Code.png)
-
----
-
-[Inconsolata](https://www.levien.com/type/myfonts/inconsolata.html) + `Script12 BT` = [Inconsolata iScript](./dist/Inconsolata%20iScript)
-
-![Inconsolata-iScript](https://gitlab.com/sainnhe/img/-/raw/master/font-Inconsolata-iScript.png)
 
 ---
 
