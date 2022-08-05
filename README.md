@@ -44,9 +44,21 @@
 
 ---
 
+[Nanum Gothic Coding](https://fonts.google.com/specimen/Nanum+Gothic+Coding#standard-styles) + [Dank Mono](https://philpl.gumroad.com/l/dank-mono) = [Nanum Gothic Cursive](./dist/Nanum%20Gothic%20Cursive)
+
+![Nanum Gothic Cursive](https://gitlab.com/sainnhe/img/-/raw/master/font-Nanum-Gothic-Cursive.png)
+
+---
+
 [Recursive Mono](https://www.recursive.design) + [Cartograph CF](https://connary.com/cartograph.html) = [Recursive](./dist/Recursive)
 
 ![Recursive](https://gitlab.com/sainnhe/img/-/raw/master/font-Recursive.png)
+
+---
+
+[The Mix Mono](https://www.lucasfonts.com/fonts/the-mix-mono) + `Script12 BT` = [The Mix iScript](./dist/The%20Mix%20iScript)
+
+![The Mix iScript](https://gitlab.com/sainnhe/img/-/raw/master/font-The-Mix-iScript.png)
 
 ---
 
