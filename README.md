@@ -58,7 +58,7 @@ But do you know that you can patch your favorite fonts with cursive italics from
 
 This repository provides utilities to help you do this.
 
-There are also some patched fonts available for downloading in [/dist](./dist) directory, all of them support complete nerd font symbols and ligatures.
+There are also some patched fonts available for downloading in the [/dist](./dist) directory and the [release page](https://git.sainnhe.dev/sainnhe/icursive-nerd-font/releases), all of them support complete nerd font symbols and ligatures.
 
 ## Patch your favorite fonts
 
